@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 984851068}
   - component: {fileID: 984851067}
   - component: {fileID: 984851066}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 1399633423}
   - component: {fileID: 1399633422}
   - component: {fileID: 1399633421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,6 +330,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d004eae3ba47e49a1c8f7843607c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  jumpPower: 300
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!50 &1399633422
 Rigidbody2D:
   serializedVersion: 4
@@ -375,7 +380,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0023589, y: 0.9836164}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1399633424
 SpriteRenderer:
@@ -433,7 +438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399633420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.55, y: 0.72, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
