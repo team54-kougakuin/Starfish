@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 
         //LinecastでPlayerの足元に地面があるか判定
         isGround = Physics2D.Linecast(
-            transform.position + transform.up * (-0.5f*transform.localScale.y),
+            transform.position + transform.up * (-0.55f*transform.localScale.y),
             transform.position - transform.up * 0.05f,
             groundLayer);
         //スペースキーを押し、さらに接地しているとき
