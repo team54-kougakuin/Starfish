@@ -14,11 +14,22 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rb;
 
+    public float left = 0;
+
+    public float right = 0;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        this.transform.position = new Vector3
+            (Mathf.Clamp(transform.position.x, left, right),
+            transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame
@@ -32,7 +43,7 @@ public class Player : MonoBehaviour
 
         //LinecastでPlayerの足元に地面があるか判定
         isGround = Physics2D.Linecast(
-            transform.position + transform.up * (-0.55f*transform.localScale.y),
+            transform.position + transform.up * (-0.55f * transform.localScale.y),
             transform.position - transform.up * 0.05f,
             groundLayer);
         //スペースキーを押し、さらに接地しているとき
