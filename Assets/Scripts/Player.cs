@@ -14,23 +14,13 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rb;
 
-    public float left = 0;
-
-    public float right = 0;
-
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
-    void Update()
-    {
-        this.transform.position = new Vector3
-            (Mathf.Clamp(transform.position.x, left, right),
-            transform.position.y, transform.position.z);
-    }
+    
 
     // Update is called once per frame
     void FixedUpdate()
