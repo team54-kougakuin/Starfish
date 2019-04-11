@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public float jumpPower = 700;//ジャンプ力
     public LayerMask groundLayer;//Linecastで判定するLayer
     bool isGround;//着地判定
+    public Mouse mousescript;
+    Vector3 mousePos;
 
     Rigidbody2D rb;
 
@@ -19,6 +21,9 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
+        mousePos = mousescript.MousePos;
+        Debug.Log(mousePos);
     }
     
 
@@ -44,5 +49,17 @@ public class Player : MonoBehaviour
             //AddForceにて上方向へ力を加える
             rb.AddForce(Vector2.up * jumpPower);
         }
+
+        //左クリックを押したとき
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
+    }
+
+    void Attack()
+    {
+        var movedirection = (mousePos - transform.position).normalized;
+
     }
 }
