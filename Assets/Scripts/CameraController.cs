@@ -6,10 +6,9 @@ public class CameraController : MonoBehaviour
 {
     public GameObject player;
 
-    public GameObject stage;
-    public GameObject lu;
-    public GameObject rd;
-    
+    public GameObject ld;
+    public GameObject ru;
+
     [HideInInspector]
     public Camera camera;
 
@@ -18,7 +17,6 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer = stage.GetComponent<SpriteRenderer>(); 
         camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
@@ -31,16 +29,11 @@ public class CameraController : MonoBehaviour
 
     void CameraClamp()
     {
-        if (stage!=null)
+        if (ld != null && ru != null)
         {
             Vector3 pos = transform.position;
-
-            ////ターゲットの左上と右下の座標
-            //Vector2 max = spriteRenderer.sprite.bounds.max;
-            //Vector2 min = spriteRenderer.sprite.bounds.min;
-
-            //Debug.Log(Screen.width);
-            //Debug.Log(max.x);
+            
+            //画面の四隅の座標を取得
             Vector3 downLeft = camera.ViewportToWorldPoint(Vector3.zero);
             Vector2 downLeft2D = new Vector2(downLeft.x, downLeft.y);
             Vector3 topRight = camera.ViewportToWorldPoint(Vector3.one);
@@ -48,27 +41,18 @@ public class CameraController : MonoBehaviour
             Vector2 topLeft = new Vector2(downLeft2D.x, topRight2D.y);
             Vector2 downRight = new Vector2(topRight2D.x, downLeft2D.y);
 
-            float a = Vector2.Distance(downLeft2D, downRight);
-            float b = Vector2.Distance(topLeft, downLeft2D);
 
-            Debug.Log(a + "," + b);
+            float wid = Vector2.Distance(downLeft2D, downRight);
+            float hei = Vector2.Distance(topLeft, downLeft2D);
 
-            pos.x = Mathf.Clamp(pos.x, lu.transform.position.x + a / 2, rd.transform.position.x - a / 2);
-            pos.y = Mathf.Clamp(pos.y, lu.transform.position.y + b / 2, rd.transform.position.y - b / 2);
+            Debug.Log(wid + "," + hei);
+
+            pos.x = Mathf.Clamp(pos.x, ld.transform.position.x + wid / 2, ru.transform.position.x - wid / 2);
+            pos.y = Mathf.Clamp(pos.y, ld.transform.position.y + hei / 2, ru.transform.position.y - hei / 2);
 
             //Debug.Log(lu.transform.position.x);
 
             transform.position = pos;
-        }
-    }
-
-    void PlayerClamp()
-    {
-        if (player != null)
-        {
-            Vector3 pos = player.transform.position;
-
-            
         }
     }
 }
