@@ -6,21 +6,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    private float speed = 5.0f;
+    public float speed = 5.0f;
 
-    [SerializeField]
-    private float jumpPower = 700;//ジャンプ力
-
-    [SerializeField]
+    public float jumpPower = 700;//ジャンプ力
     public LayerMask groundLayer;//Linecastで判定するLayer
+    bool isGround;//着地判定
 
-    [SerializeField]
-    private LayerMask enemyLayer;//Linecastで判定するLayer
-    
-    private bool isGround;//着地判定
-    
-    private Rigidbody2D rb;
+    Rigidbody2D rb;
 
 
     // Start is called before the first frame update
@@ -29,10 +21,6 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
     
-    void Update()
-    { 
-
-    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -48,15 +36,6 @@ public class Player : MonoBehaviour
             transform.position + transform.up * (-0.55f * transform.localScale.y),
             transform.position - transform.up * 0.05f,
             groundLayer);
-
-        if (isGround==false)
-        {
-            isGround = Physics2D.Linecast(
-            transform.position + transform.up * (-0.55f * transform.localScale.y),
-            transform.position - transform.up * 0.05f,
-            enemyLayer);
-        }
-
         //スペースキーを押し、さらに接地しているとき
         if (Input.GetKeyDown(KeyCode.Space) && isGround)
         {
