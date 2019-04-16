@@ -1,7 +1,18 @@
 fileFormatVersion: 2
 guid: 957cb8573bd4a0b4694fd5cb3670a375
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: "Please Space(\u4EEE)_0"
+    21300002: "Please Space(\u4EEE)_1"
+    21300004: "Please Space(\u4EEE)_2"
+    21300006: "Please Space(\u4EEE)_3"
+    21300008: "Please Space(\u4EEE)_4"
+    21300010: "Please Space(\u4EEE)_5"
+    21300012: "Please Space(\u4EEE)_6"
+    21300014: "Please Space(\u4EEE)_7"
+    21300016: "Please Space(\u4EEE)_8"
+    21300018: "Please Space(\u4EEE)_9"
+    21300020: "Please Space(\u4EEE)_10"
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -69,9 +80,240 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "Please Space(\u4EEE)_0"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 432
+        width: 195
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2834e000db3aec47a240151aeda248e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Please Space(\u4EEE)_1"
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 437
+        width: 84
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9df36d3e016eec4abbf55f2d3fb9545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Please Space(\u4EEE)_2"
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 423
+        width: 105
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b679cbe5af48e4e9b1f2fc09b34416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Please Space(\u4EEE)_3"
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 432
+        width: 131
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1fe49e0f27c4e478fe79d508906f99
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Please Space(\u4EEE)_4"
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 435
+        width: 136
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791d5e3b2dd7a814baa24f996fc33f3c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Please Space(\u4EEE)_5"
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 420
+        width: 108
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8917202fc6f3c7f4ab95eaed7e0a52d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Please Space(\u4EEE)_6"
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 436
+        width: 240
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452482281e91dd348bb80c0d4527b3be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Please Space(\u4EEE)_7"
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 319
+        width: 154
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102b3e8c477ad034b9ef223e23860503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Please Space(\u4EEE)_8"
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 434
+        width: 131
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4227e9b9d0364f4a8f5688a96da0ba9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Please Space(\u4EEE)_9"
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 436
+        width: 122
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54872905d9c2c2749899aa4a5230917f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Please Space(\u4EEE)_10"
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 423
+        width: 105
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180472f325268374fa72479417735601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
