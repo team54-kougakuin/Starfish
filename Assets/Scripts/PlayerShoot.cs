@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 10;
+    private float speed = 10.0f;
 
     [SerializeField]
     private GameObject bullet;
 
     private bool isShoot = true;
+    private bool shoot = true;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class PlayerShoot : MonoBehaviour
             isShoot = false;
 
             //弾の生成
-            GameObject clone = Instantiate(bullet, transform.position, Quaternion.identity);
+            GameObject clone = Instantiate(bullet, transform.position, Quaternion.identity/*回転*/);
 
             //クリックした座標の取得(スクリーン座標からワールド座標へ）
             Vector3 mouseWorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -37,9 +38,14 @@ public class PlayerShoot : MonoBehaviour
             clone.GetComponent<Rigidbody2D>().velocity = shotForward * speed;
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (/*Input.GetMouseButtonDown(1) || */Input.GetMouseButtonDown(2) && shoot)
         {
             isShoot = true;
+        }
+
+        if (Input.GetMouseButtonDown(1) && !isShoot)
+        {
+            shoot = false;
         }
     }
 }
