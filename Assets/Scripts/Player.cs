@@ -10,17 +10,18 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<PlayerMove>().enabled = false;
+        GetComponent<PlayerShoot>().enabled = false;
     }
-
-    // Update is called once per frame
-    void FixedUpdate()
+    
+    void Update()
     {
-        var input = Input.GetAxisRaw("Horizontal");
-        var component = GetComponent<Rigidbody2D>();
-        var velocity = component.velocity;
-        velocity.x = input * 5f;
-        component.velocity = velocity;
 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            GetComponent<PlayerMove>().enabled = !GetComponent<PlayerMove>().enabled;
+            GetComponent<PlayerShoot>().enabled = !GetComponent<PlayerShoot>().enabled;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
     }
 }
