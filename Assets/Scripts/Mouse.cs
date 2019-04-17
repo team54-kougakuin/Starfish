@@ -5,6 +5,13 @@ using UnityEngine;
 public class Mouse : MonoBehaviour
 {
     public Texture2D texture;
+    public Vector3 mousePos;
+
+    public Vector3 MousePos
+    {
+        get { return this.mousePos; }
+        private set { this.mousePos = value; }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +25,7 @@ public class Mouse : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 mousePos = Input.mousePosition;
+            mousePos = Input.mousePosition;
             Debug.Log(mousePos);
         }
     }
