@@ -58,6 +58,13 @@ public class PlayerMove : MonoBehaviour
             transform.position - transform.up * 0.05f,
             enemyLayer);
         }
+        if (isGround == false)//playerの上にいるときのジャンプ
+        {
+            isGround = Physics2D.Linecast(
+            transform.position + transform.up * (-0.55f * transform.localScale.y),
+            transform.position - transform.up * 0.05f,
+            playerLayer);
+        }
 
         //スペースキーを押し、さらに接地しているとき
         if (Input.GetKeyDown(KeyCode.Space) && isGround)
