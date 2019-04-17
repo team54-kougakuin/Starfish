@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GamePlay.unity
     guid: 7bce5cbe5557d384ca98b1041332d973
+  - enabled: 1
+    path: Assets/Scenes/negishi.unity
+    guid: 044e1157c0d7a9649920a05bd3f3fa92
   m_configObjects: {}
