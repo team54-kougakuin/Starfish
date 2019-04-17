@@ -8,7 +8,7 @@ public class PrefabPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<PlayerMove>().enabled = false;
+        GetComponent<PlayerCtrl>().enabled = false;
     }
 
     void Update()
@@ -16,8 +16,13 @@ public class PrefabPlayer : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            GetComponent<PlayerMove>().enabled = !GetComponent<PlayerMove>().enabled;
+            GetComponent<PlayerCtrl>().enabled = !GetComponent<PlayerCtrl>().enabled;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -6,22 +6,28 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private PlayerShoot playerShoot;
 
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<PlayerMove>().enabled = false;
-        GetComponent<PlayerShoot>().enabled = false;
+        GetComponent<PlayerCtrl>().enabled = true;
+        GetComponent<PlayerShoot>().enabled = true;
+
+        playerShoot = GetComponent<PlayerShoot>();
     }
     
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && !playerShoot.ShootFlag())
         {
-            GetComponent<PlayerMove>().enabled = !GetComponent<PlayerMove>().enabled;
-            GetComponent<PlayerShoot>().enabled = !GetComponent<PlayerShoot>().enabled;
+            GetComponent<PlayerCtrl>().enabled = !GetComponent<PlayerCtrl>().enabled;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
+
+        if (playerShoot.ShootFlag())
+        {
+            GetComponent<PlayerCtrl>().enabled = true;
         }
     }
 }
