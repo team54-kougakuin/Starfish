@@ -18,6 +18,9 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+
+        ld = GameObject.FindGameObjectWithTag("BottomLeft");
+        ru = GameObject.FindGameObjectWithTag("TopRight");
     }
 
     // Update is called once per frame
@@ -44,9 +47,7 @@ public class CameraController : MonoBehaviour
 
             float wid = Vector2.Distance(downLeft2D, downRight);
             float hei = Vector2.Distance(topLeft, downLeft2D);
-
-            Debug.Log(wid + "," + hei);
-
+            
             pos.x = Mathf.Clamp(pos.x, ld.transform.position.x + wid / 2, ru.transform.position.x - wid / 2);
             pos.y = Mathf.Clamp(pos.y, ld.transform.position.y + hei / 2, ru.transform.position.y - hei / 2);
 

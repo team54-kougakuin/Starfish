@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+<<<<<<< HEAD
     [SerializeField]
     private float speed = 5.0f;
 
@@ -22,24 +23,35 @@ public class Player : MonoBehaviour
 
 
     private Rigidbody2D rb;
+=======
+    private PlayerShoot playerShoot;
+>>>>>>> d57412bf5dba34fa06d2e43f7cff1b982e04d1fe
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        GetComponent<PlayerCtrl>().enabled = true;
+        GetComponent<PlayerShoot>().enabled = true;
+
+        playerShoot = GetComponent<PlayerShoot>();
     }
+<<<<<<< HEAD
 
 
 
     // Update is called once per frame
+=======
+    
+>>>>>>> d57412bf5dba34fa06d2e43f7cff1b982e04d1fe
     void Update()
     {
-        var input = Input.GetAxisRaw("Horizontal");
-        var component = GetComponent<Rigidbody2D>();
-        var velocity = component.velocity;
-        velocity.x = input * speed;
-        component.velocity = velocity;
+        if (Input.GetKeyDown(KeyCode.Q) && !playerShoot.ShootFlag())
+        {
+            GetComponent<PlayerCtrl>().enabled = !GetComponent<PlayerCtrl>().enabled;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
 
+<<<<<<< HEAD
         //LinecastでPlayerの足元に地面があるか判定
         isGround = Physics2D.Linecast(
             transform.position + transform.up * (-0.55f * transform.localScale.y),
@@ -56,11 +68,11 @@ public class Player : MonoBehaviour
 
         //スペースキーを押し、さらに接地しているとき
         if (Input.GetKeyDown(KeyCode.Space) && isGround)
+=======
+        if (playerShoot.ShootFlag())
+>>>>>>> d57412bf5dba34fa06d2e43f7cff1b982e04d1fe
         {
-            //着地判定をfalse
-            isGround = false;
-            //AddForceにて上方向へ力を加える
-            rb.AddForce(Vector2.up * jumpPower);
+            GetComponent<PlayerCtrl>().enabled = true;
         }
     }
 
