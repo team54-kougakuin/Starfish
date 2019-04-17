@@ -16,7 +16,7 @@ public class SceneChange : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("select");    //「3」
+            SceneManager.LoadScene("negishi");    //「3」
         }
     }
 }
