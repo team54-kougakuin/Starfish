@@ -15,10 +15,19 @@ public class PlayerShoot : MonoBehaviour
 
     private HpBarCtrl hpCtrl;
 
+    private PlayerCtrl plCtrl;
+
     // Start is called before the first frame update
     void Start()
     {
         hpCtrl = GetComponent<HpBarCtrl>();
+        plCtrl = GetComponent<PlayerCtrl>();
+
+        if (plCtrl.enabled == false)
+        {
+            shoot = false;
+            isShoot = false;
+        }
     }
 
     // Update is called once per frame

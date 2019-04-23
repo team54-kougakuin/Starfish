@@ -16,13 +16,19 @@ public class HpBarCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerShoot = player.GetComponent<PlayerShoot>();
         _slider = GameObject.Find("Slider").GetComponent<Slider>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            playerShoot = player.GetComponent<PlayerShoot>();
+        }
+        Debug.Log(playerShoot.IsShootFlag());
+
         if (hp > _slider.minValue)
         {
             hp -= 0.1f;
@@ -37,12 +43,12 @@ public class HpBarCtrl : MonoBehaviour
             hp -= 10;
         }
 
-        _slider.value = hp;
-
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
             hp = _slider.maxValue;
         }
+
+        _slider.value = hp;
     }
 
     public bool IsDead()
