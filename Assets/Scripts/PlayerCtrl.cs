@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerCtrl : MonoBehaviour
 {
     [SerializeField]
     private float speed = 5.0f;
@@ -15,9 +15,6 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField]
     private LayerMask enemyLayer;//Linecastで判定するLayer
-
-    [SerializeField]
-    private LayerMask playerLayer;
 
     private bool isGround;//着地判定
 
@@ -57,13 +54,6 @@ public class PlayerMove : MonoBehaviour
             transform.position + transform.up * (-0.55f * transform.localScale.y),
             transform.position - transform.up * 0.05f,
             enemyLayer);
-        }
-        if (isGround == false)//playerの上にいるときのジャンプ
-        {
-            isGround = Physics2D.Linecast(
-            transform.position + transform.up * (-0.55f * transform.localScale.y),
-            transform.position - transform.up * 0.05f,
-            playerLayer);
         }
 
         //スペースキーを押し、さらに接地しているとき

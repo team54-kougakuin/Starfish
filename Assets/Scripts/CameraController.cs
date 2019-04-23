@@ -18,6 +18,9 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+
+        ld = GameObject.FindGameObjectWithTag("BottomLeft");
+        ru = GameObject.FindGameObjectWithTag("TopRight");
     }
 
     // Update is called once per frame

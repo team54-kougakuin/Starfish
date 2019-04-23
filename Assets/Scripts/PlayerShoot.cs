@@ -13,9 +13,12 @@ public class PlayerShoot : MonoBehaviour
     private bool isShoot = true;
     private bool shoot = true;
 
+    private HpBarCtrl hpCtrl;
+
     // Start is called before the first frame update
     void Start()
     {
+        hpCtrl = GetComponent<HpBarCtrl>();
     }
 
     // Update is called once per frame
@@ -38,7 +41,7 @@ public class PlayerShoot : MonoBehaviour
             clone.GetComponent<Rigidbody2D>().velocity = shotForward * speed;
         }
 
-        if (/*Input.GetMouseButtonDown(1) || */Input.GetMouseButtonDown(2) && shoot)
+        if (Input.GetMouseButtonDown(2) && shoot)
         {
             isShoot = true;
         }
@@ -47,5 +50,21 @@ public class PlayerShoot : MonoBehaviour
         {
             shoot = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.E) && !shoot)
+        {
+            shoot = true;
+            isShoot = true;
+        }
+    }
+
+    public bool ShootFlag()
+    {
+        return shoot;
+    }
+
+    public bool IsShootFlag()
+    {
+        return isShoot;
     }
 }
