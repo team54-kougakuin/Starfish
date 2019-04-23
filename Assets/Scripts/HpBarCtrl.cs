@@ -11,37 +11,61 @@ public class HpBarCtrl : MonoBehaviour
     PlayerShoot playerShoot;
     [SerializeField]
     private GameObject player;
-    
+
+    [SerializeField]
+    private GameObject pauseCamera;
+
+    private PauseScript pause;
+
+    [SerializeField]
+    private GameObject pldead;
+
+    private PlayerCtrl playerc;
+
+    int a = 1;
+
 
     // Start is called before the first frame update
     void Start()
     {
         playerShoot = player.GetComponent<PlayerShoot>();
         _slider = GameObject.Find("Slider").GetComponent<Slider>();
+
+        pause = pauseCamera.GetComponent<PauseScript>();
+
+        playerc = pldead.GetComponent<PlayerCtrl>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (hp > _slider.minValue)
-        {
-            hp -= 0.1f;
-        }
-        else
-        {
-            hp = 0;
-        }
+        
 
-        if (Input.GetMouseButtonDown(0) && playerShoot.IsShootFlag())
+        if (!pause.PaCheck())
         {
-            hp -= 10;
-        }
 
-        _slider.value = hp;
+            if (hp > _slider.minValue)
+            {
+                hp -= 0.1f;
+            }
+            else if (hp < _slider.minValue)
+            {
+                hp = 0;
+                playerc.IsDead();
+            }
 
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            hp = _slider.maxValue;
+            if (Input.GetMouseButtonDown(0) && !playerShoot.IsShootFlag() && a == 1)
+            {
+                hp -= 10;
+                a = 0;
+            }
+
+            _slider.value = hp;
+
+            if (Input.GetKeyDown(KeyCode.Alpha9))
+            {
+                hp = _slider.maxValue;
+            }
         }
     }
 

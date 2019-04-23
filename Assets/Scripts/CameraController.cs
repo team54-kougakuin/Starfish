@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        camera = GetComponent<Camera>();
 
         ld = GameObject.FindGameObjectWithTag("BottomLeft");
         ru = GameObject.FindGameObjectWithTag("TopRight");
@@ -26,8 +26,15 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -20);
+        if (ld == null || ru == null)
+        {
+            ld = GameObject.FindGameObjectWithTag("BottomLeft");
+            ru = GameObject.FindGameObjectWithTag("TopRight");
+        }
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
         CameraClamp();
+
+        transform.position = new Vector3(transform.position.x, transform.position.y, -10);
     }
 
     void CameraClamp()
