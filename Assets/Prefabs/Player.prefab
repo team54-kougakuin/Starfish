@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4459591901580439019}
   - component: {fileID: 54322173003853882}
   - component: {fileID: 6532257750174186818}
+  - component: {fileID: 3401051923811197697}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -164,7 +165,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54322173003853885}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f543ac52cd21eb489b216978e70b16b, type: 3}
   m_Name: 
@@ -191,6 +192,20 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 2048
+--- !u!114 &3401051923811197697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54322173003853885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa8265cd6d81144db0abfaec86cbef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  subCamera: {fileID: 7777684343776510933}
 --- !u!1 &7777684343776510933
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2309739057557619766
 Transform:
   m_ObjectHideFlags: 0

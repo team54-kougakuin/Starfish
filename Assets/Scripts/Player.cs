@@ -25,9 +25,22 @@ public class Player : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
+        Change();
+
         if (playerShoot.ShootFlag())
         {
             GetComponent<PlayerCtrl>().enabled = true;
+        }
+    }
+
+    void Change()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (GetComponent<PlayerCtrl>().enabled == false)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

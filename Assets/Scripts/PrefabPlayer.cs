@@ -22,7 +22,15 @@ public class PrefabPlayer : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Destroy(gameObject);
+            if (GetComponent<PlayerCtrl>().enabled)
+            {
+                GetComponent<Player>().enabled = true;
+                GetComponent<PrefabPlayer>().enabled = false;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
