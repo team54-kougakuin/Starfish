@@ -11,17 +11,36 @@ public class HpBarCtrl : MonoBehaviour
     PlayerShoot playerShoot;
     [SerializeField]
     private GameObject player;
-    
+
+    [SerializeField]
+    private GameObject pauseCamera;
+
+    private PauseScript pause;
+
+    [SerializeField]
+    private GameObject pldead;
+
+    private PlayerCtrl playerc;
+
+    int a = 1;
+
 
     // Start is called before the first frame update
     void Start()
     {
         _slider = GameObject.Find("Slider").GetComponent<Slider>();
+
+        pause = pauseCamera.GetComponent<PauseScript>();
+
+        playerc = pldead.GetComponent<PlayerCtrl>();
     }
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
+        
+=======
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player");
@@ -37,15 +56,39 @@ public class HpBarCtrl : MonoBehaviour
         {
             hp = 0;
         }
+>>>>>>> 7ac21ffb5135e353e28d43891b6ae299e1bfe9b4
 
-        if (Input.GetMouseButtonDown(0) && playerShoot.IsShootFlag())
+        if (!pause.PaCheck())
         {
-            hp -= 10;
-        }
 
+<<<<<<< HEAD
+            if (hp > _slider.minValue)
+            {
+                hp -= 0.1f;
+            }
+            else if (hp < _slider.minValue)
+            {
+                hp = 0;
+                playerc.IsDead();
+            }
+
+            if (Input.GetMouseButtonDown(0) && !playerShoot.IsShootFlag() && a == 1)
+            {
+                hp -= 10;
+                a = 0;
+            }
+
+            _slider.value = hp;
+
+            if (Input.GetKeyDown(KeyCode.Alpha9))
+            {
+                hp = _slider.maxValue;
+            }
+=======
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
             hp = _slider.maxValue;
+>>>>>>> 7ac21ffb5135e353e28d43891b6ae299e1bfe9b4
         }
 
         _slider.value = hp;
