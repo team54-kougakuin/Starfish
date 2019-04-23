@@ -21,13 +21,16 @@ GameObject:
 =======
   - component: {fileID: 54322173003853879}
   - component: {fileID: 54322173003853878}
-  - component: {fileID: 54322173003853881}
   - component: {fileID: 54322173003853880}
   - component: {fileID: 54322173003853883}
   - component: {fileID: 4459591901580439019}
   - component: {fileID: 54322173003853882}
   - component: {fileID: 6532257750174186818}
+<<<<<<< HEAD
 >>>>>>> d57412bf5dba34fa06d2e43f7cff1b982e04d1fe
+=======
+  - component: {fileID: 3149739533995253908}
+>>>>>>> 9dc19a9bae4fae1d8d8cb0627d48a5e2c831f6eb
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -107,17 +110,18 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 15a953d4909ba8b4c8e701b192914cba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09941e7c0a0b1fd4c871f62acf83fc91, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.37, y: 0.39}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!50 &7050843667189632033
 =======
@@ -147,6 +151,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+=======
+>>>>>>> 9dc19a9bae4fae1d8d8cb0627d48a5e2c831f6eb
 --- !u!50 &54322173003853880
 >>>>>>> d57412bf5dba34fa06d2e43f7cff1b982e04d1fe
 Rigidbody2D:
@@ -188,8 +194,12 @@ MonoBehaviour:
   m_Enabled: 1
 =======
   m_GameObject: {fileID: 54322173003853885}
+<<<<<<< HEAD
   m_Enabled: 0
 >>>>>>> d57412bf5dba34fa06d2e43f7cff1b982e04d1fe
+=======
+  m_Enabled: 1
+>>>>>>> 9dc19a9bae4fae1d8d8cb0627d48a5e2c831f6eb
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30d004eae3ba47e49a1c8f7843607c72, type: 3}
   m_Name: 
@@ -203,7 +213,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54322173003853885}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5e38867ee4fc6c459ea0cb8fa51803b, type: 3}
   m_Name: 
@@ -215,7 +225,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54322173003853885}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f543ac52cd21eb489b216978e70b16b, type: 3}
   m_Name: 
@@ -309,6 +319,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
+<<<<<<< HEAD
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
@@ -323,10 +334,16 @@ Camera:
   m_StereoSeparation: 0.022
 --- !u!81 &1928133120004541761
 AudioListener:
+=======
+    m_Bits: 256
+--- !u!70 &3149739533995253908
+CapsuleCollider2D:
+>>>>>>> 9dc19a9bae4fae1d8d8cb0627d48a5e2c831f6eb
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 7777684343776510933}
   m_Enabled: 1
 --- !u!114 &2119284774270386544
@@ -357,3 +374,15 @@ MonoBehaviour:
   ru: {fileID: 0}
   camera: {fileID: 0}
 >>>>>>> d57412bf5dba34fa06d2e43f7cff1b982e04d1fe
+=======
+  m_GameObject: {fileID: 54322173003853885}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: edf6f62f17bd3ca48a3977b8d917439a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 1}
+  m_Direction: 0
+>>>>>>> 9dc19a9bae4fae1d8d8cb0627d48a5e2c831f6eb
