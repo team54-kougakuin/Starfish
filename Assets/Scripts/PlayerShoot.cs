@@ -15,16 +15,30 @@ public class PlayerShoot : MonoBehaviour
 
     private HpBarCtrl hpCtrl;
 
+<<<<<<< HEAD
     [SerializeField]
     private GameObject pauseCamera;
 
     private PauseScript pause;
+=======
+    private PlayerCtrl plCtrl;
+>>>>>>> 7ac21ffb5135e353e28d43891b6ae299e1bfe9b4
 
     // Start is called before the first frame update
     void Start()
     {
         hpCtrl = GetComponent<HpBarCtrl>();
+<<<<<<< HEAD
         pause = pauseCamera.GetComponent<PauseScript>();
+=======
+        plCtrl = GetComponent<PlayerCtrl>();
+
+        if (plCtrl.enabled == false)
+        {
+            shoot = false;
+            isShoot = false;
+        }
+>>>>>>> 7ac21ffb5135e353e28d43891b6ae299e1bfe9b4
     }
 
     // Update is called once per frame

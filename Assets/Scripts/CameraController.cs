@@ -18,20 +18,32 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         camera = GetComponent<Camera>();
+<<<<<<< HEAD
 
         ld = GameObject.FindGameObjectWithTag("BottomLeft");
         ru = GameObject.FindGameObjectWithTag("TopRight");
+=======
+        
+>>>>>>> 7ac21ffb5135e353e28d43891b6ae299e1bfe9b4
     }
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         if (ld == null || ru == null)
+=======
+        if (ld == null || ru ==null)
+>>>>>>> 7ac21ffb5135e353e28d43891b6ae299e1bfe9b4
         {
             ld = GameObject.FindGameObjectWithTag("BottomLeft");
             ru = GameObject.FindGameObjectWithTag("TopRight");
         }
+<<<<<<< HEAD
         transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
+=======
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -20);
+>>>>>>> 7ac21ffb5135e353e28d43891b6ae299e1bfe9b4
         CameraClamp();
 
         transform.position = new Vector3(transform.position.x, transform.position.y, -10);

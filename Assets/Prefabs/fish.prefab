@@ -8,6 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Prefabs/fish.prefab
   - component: {fileID: 7883499224219748543}
   - component: {fileID: 4984658953961712750}
   - component: {fileID: 8568584151008099825}
@@ -133,6 +134,17 @@ GameObject:
   - component: {fileID: 3295810766984392860}
   - component: {fileID: 2426664762701231474}
   - component: {fileID: 3640545600404571609}
+=======
+  - component: {fileID: 54322173003853879}
+  - component: {fileID: 54322173003853878}
+  - component: {fileID: 54322173003853881}
+  - component: {fileID: 54322173003853880}
+  - component: {fileID: 54322173003853883}
+  - component: {fileID: 4459591901580439019}
+  - component: {fileID: 54322173003853882}
+  - component: {fileID: 6532257750174186818}
+  - component: {fileID: 3401051923811197697}
+>>>>>>> 7ac21ffb5135e353e28d43891b6ae299e1bfe9b4:Assets/Prefabs/Player.prefab
   m_Layer: 8
   m_Name: fish
   m_TagString: Player
@@ -254,7 +266,25 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/fish.prefab
   m_GameObject: {fileID: 4651705271327519865}
+=======
+  m_GameObject: {fileID: 54322173003853885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f543ac52cd21eb489b216978e70b16b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  bullet: {fileID: 7445166075464425525, guid: 6dc98bb92da844b4c87ad8b7039a4205, type: 3}
+--- !u!114 &6532257750174186818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54322173003853885}
+>>>>>>> 7ac21ffb5135e353e28d43891b6ae299e1bfe9b4:Assets/Prefabs/Player.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e05eae7da6cdac469129d99e8008b71, type: 3}
@@ -268,12 +298,32 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 2048
+<<<<<<< HEAD:Assets/Prefabs/fish.prefab
 --- !u!114 &2519571347805093319
+MonoBehaviour:
+=======
+--- !u!114 &3401051923811197697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54322173003853885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa8265cd6d81144db0abfaec86cbef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  subCamera: {fileID: 7777684343776510933}
+--- !u!1 &7777684343776510933
+GameObject:
+>>>>>>> 7ac21ffb5135e353e28d43891b6ae299e1bfe9b4:Assets/Prefabs/Player.prefab
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/fish.prefab
   m_GameObject: {fileID: 4651705271327519865}
   m_Enabled: 0
   m_EditorHideFlags: 0
@@ -285,6 +335,23 @@ MonoBehaviour:
   pauseCamera: {fileID: 0}
 --- !u!114 &3004880259370876635
 MonoBehaviour:
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2309739057557619766}
+  - component: {fileID: 7313787305250658716}
+  - component: {fileID: 1928133120004541761}
+  - component: {fileID: 2119284774270386544}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Subcamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2309739057557619766
+Transform:
+>>>>>>> 7ac21ffb5135e353e28d43891b6ae299e1bfe9b4:Assets/Prefabs/Player.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
